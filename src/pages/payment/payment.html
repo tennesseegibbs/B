@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>BlueCoin</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Payment</h2>
+  <!-- <form #postTx= "ngForm" ng-submit="ransferMoney(postTx)">
+      <ion-item> 
+          <ion-label color="primary" stacked>Your ID</ion-label>
+          <ion-input type="number" [(ngModel)]="fromId" name= "fromId"></ion-input>  
+          <button (click)="setFromId()">Set Value</button>
+      </ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Receiver ID</ion-label>
+        <ion-input type="number" [(ngModel)]="toId" name= "toId"></ion-input>
+        <button (click)="setToId()">Set Value</button>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary" stacked>Amount</ion-label>
+          <ion-input type="number" [(ngModel)]="amount" name= "amount"></ion-input>
+          <button (click)="setAmount()">Set Value</button>
+        </ion-item>
+
+        
+        <button ion-button (click)="transferMoney(postTx)" block>Send BlueCoin</button>
+    </form> -->
+    <form #postTx= "ngForm" (ng-submit)="transferMoney(postTx)">
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+                <ion-label color="primary" stacked>Your ID</ion-label>
+               <ion-input type="number" name= "fromId"[(ngModel)]="fromId" ></ion-input>
+               <!-- <button (click)="setFromId()">Set Value</button> -->
+            </ion-item>
+            <ion-item> 
+                <ion-label color="primary" stacked>Receiver ID</ion-label>
+                <ion-input type="number" name= "toId"[(ngModel)]="toId" ></ion-input>
+                <!-- <button (click)="setToId()">Set Value</button> -->
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" stacked>Amount</ion-label>
+                <ion-input type="number" name= "amount"[(ngModel)]="amount" ></ion-input>
+                <!-- <button (click)="setAmount()">Set Value</button> -->
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="signup-col">
+            <button ion-button (click)="transferMoney(postTx)" block>Send BlueCoin</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </ion-content>

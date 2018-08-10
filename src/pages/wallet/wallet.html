@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ZipCoin Blue Wallet</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let wallet of wallets">
+        <ion-card>
+            <ion-card-header>
+               Name: <h2>{{wallet.name}}</h2>
+            </ion-card-header>
+            <ion-card-content>
+     Balance: <h2>{{wallet.amount}}</h2>
+     Public Key: <h2>{{wallet.publicId}}</h2>
+      
+    </ion-card-content>
+  </ion-card>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

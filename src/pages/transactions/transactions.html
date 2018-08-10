@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Transactions
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+  
+    <ion-content padding>
+      <ion-list>
+        <ion-item *ngFor="let transaction of transactions">
+            <ion-card>
+                <ion-card-header>
+                   Name: <h2>{{transaction.name}}</h2>
+                </ion-card-header>
+                <ion-card-content>
+                    Date: <h2>{{transaction.timestamp}}</h2>
+                    Sender: <h2>{{transaction.fromId}}</h2>
+                    Receiver: <h2>{{transaction.toId}}</h2>
+                    Amount: <h2>{{transaction.amount}}</h2>
+                    TransactionId<h2>{{transaction.transactionId}}</h2>
+        </ion-card-content>
+      </ion-card>
+        </ion-item>
+      </ion-list>
+    
+      
+    </ion-content>

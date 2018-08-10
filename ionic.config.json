@@ -1,0 +1,7 @@
+{
+  "name": "blueCoin",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
